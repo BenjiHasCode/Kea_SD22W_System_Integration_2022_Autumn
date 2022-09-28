@@ -1,0 +1,12 @@
+<me>
+    <name>Benji :D</name>
+    <age>24</age>
+    <likesProgramming>true</likesProgramming>
+    <hobbies>
+        <hobby>Gaming</hobby>
+        <hobby>Programming</hobby>
+        <hobby>Swimming</hobby>
+        <hobby>Diving</hobby>
+        <hobby>Drawing</hobby>
+    </hobbies>
+</me>
