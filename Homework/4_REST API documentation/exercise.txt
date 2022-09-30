@@ -1,0 +1,6 @@
+Generate documentation for the some/all of the REST APIs created last week
+(data format translation, date authority).
+
+You are free to use other tools than Swagger though OpenAPI is highly recommended.
+
+Bonus: Research how its done in various frameworks/language.
