@@ -1,34 +1,19 @@
 // yaml, json, csv
-import parseJson from 'parse-json';
-import { parse } from 'csv-parse';
-import YAML from 'yaml';
-
-import fs from 'fs';
+import { yamlParse } from './service/yamlService.js';
+import { jsonParse } from './service/jsonService.js';
+import { csvParse } from './service/csvService.js';
 
 //yaml example
 console.log('Parsing YAML');
-const yaml = fs.readFileSync('./../files/car.yaml', 'utf8');
-const yamlCar = YAML.parse(yaml);
-console.log(yamlCar);
+const parsedYaml = yamlParse('./../files/car.yaml');
+console.log(parsedYaml);
 
 //json example
 console.log('Parsing JSON');
-const json = fs.readFileSync('./../files/car.json');
-const jsonCar = parseJson(json);
-console.log(jsonCar);
-
+const parsedJson = jsonParse('./../files/car.json');
+console.log(parsedJson);
 
 //csv example
-const cars = [];
 console.log('Parsing CSV');
-const csv = fs.readFileSync('./../files/car.csv');
-parse(csv, {
-    columns: true
-}).on('readable', () => {
-    let car;
-    while ((car = this.read()) !== null) {
-        cars.push(car);
-    }
-});;
-
-console.log(cars);
+const parsedCsv = csvParse('./../files/car.csv');
+console.log(parsedCsv);
