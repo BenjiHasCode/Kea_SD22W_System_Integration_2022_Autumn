@@ -1,0 +1,7 @@
+{
+    "brand": "Tesla",
+    "model": "Model S",
+    "odometer": 10000,
+    "fast": true,
+    "traits": ["fast", "electric", "reliable", "cool"]
+}

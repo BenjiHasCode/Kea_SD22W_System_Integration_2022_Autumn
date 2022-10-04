@@ -1,0 +1,12 @@
+<car>
+    <brand>Tesla</brand>
+    <model>Model S</model>
+    <odometer>10000</odometer>
+    <fast>true</fast>
+    <traits>
+        <trait>fast</trait>
+        <trait>electric</trait>
+        <trait>reliable</trait>
+        <trait>cool</trait>
+    </traits>
+</car>
