@@ -1,4 +1,4 @@
-package services;
+package com.example.java.service;
 
 import model.Car;
 

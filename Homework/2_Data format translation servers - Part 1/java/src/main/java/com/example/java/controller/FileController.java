@@ -1,9 +1,9 @@
 package com.example.java.controller;
 
+import com.example.java.service.TextParser;
+import com.example.java.service.XmlParser;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import services.TextParser;
-import services.XmlParser;
 import model.Car;
 
 @RestController
@@ -12,7 +12,7 @@ public class FileController {
     private final XmlParser xmlParser = new XmlParser();
 
     @GetMapping("/txt")
-    public Car getTxtCar() {
+    public String getTxtCar() {
         return textParser.parse("src/main/resources/car.txt");
     }
 

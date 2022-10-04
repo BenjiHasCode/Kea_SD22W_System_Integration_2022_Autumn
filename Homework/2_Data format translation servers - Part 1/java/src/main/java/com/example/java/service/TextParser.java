@@ -1,13 +1,28 @@
-package services;
-
-import model.Car;
+package com.example.java.service;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class TextParser {
+    public String parse(String filename) {
+        try {
+            Scanner scanner = new Scanner(new File(filename));
+            StringBuilder contents = new StringBuilder();
+
+            while (scanner.hasNext()) {
+                contents.append(scanner.nextLine() + "\n");
+            }
+            return contents.toString();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    // I thought we were supposed to send objects back
+    // but from rereading assignment, it seems like we have to send the contents back?
+    /*
     public Car parse(String filename) {
         try {
             Scanner scanner = new Scanner(new File(filename));
@@ -44,5 +59,5 @@ public class TextParser {
             e.printStackTrace();
             return null;
         }
-    }
+    }*/
 }
